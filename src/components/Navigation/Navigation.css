@@ -1,0 +1,30 @@
+.navigation {
+    display: flex;
+    margin-left: auto;
+}
+
+.navigation__link {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    margin-right: 34px;
+}
+
+.navigation__link_theme_main {
+    color: #B6BCBF;
+}
+
+.navigation__link_theme_saved-news {
+    color: #1A1B22;
+}
+
+.navigation__link_active {
+    color: #FFFFFF;
+    border-bottom: 3px solid #FFFFFF;
+}
