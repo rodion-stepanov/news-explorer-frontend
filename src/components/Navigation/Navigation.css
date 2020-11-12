@@ -24,7 +24,23 @@
     color: #1A1B22;
 }
 
-.navigation__link_active {
+.navigation__active-link {
+    border-bottom: 3px solid;
+}
+
+.navigation__active-link_theme_main {
     color: #FFFFFF;
-    border-bottom: 3px solid #FFFFFF;
+    border-color: #FFFFFF;
+}
+
+.navigation__active-link_theme_saved-news {
+    color: #1A1B22;
+    border-color: #1A1B22;
+}
+
+@media screen and (max-width: 1023px) {
+    .navigation__link{
+        font-size: 16px;
+        margin-right: 16px;
+    }
 }

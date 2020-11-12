@@ -19,7 +19,7 @@
     font-style: normal;
     font-weight: 700;
     font-display: swap;
-    src: url("robotoslab-bold.ttf") format("truetype");
+    src: url("robotoslab-bold.woff?v=3.13") format("woff");
 }
 
 @font-face {

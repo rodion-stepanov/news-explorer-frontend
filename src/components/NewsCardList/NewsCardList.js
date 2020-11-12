@@ -1,16 +1,18 @@
 import './NewsCardList.css'
 import NewsCard from '../NewsCard/NewsCard';
 
-function NewsCardList() {
+function NewsCardList({theme}) {
     return (
         <section className="news-card-list">
-            <h3 className="news-card-list__title">Результаты поиска</h3>
+            {theme === 'main' && <h3 className="news-card-list__title">Результаты поиска</h3>}
             <div className="news-card-list__container">
-                <NewsCard />
-                <NewsCard />
-                <NewsCard />
+                <NewsCard theme={theme}/>
+                <NewsCard theme={theme}/>
+                <NewsCard theme={theme}/>
+                <NewsCard theme={theme}/>
+                <NewsCard theme={theme}/>
             </div>
-            <button className="news-card-list__more-button">Показать еще</button>
+            {theme === 'main' && <button className="news-card-list__more-button">Показать еще</button>}
         </section>
     )
 }

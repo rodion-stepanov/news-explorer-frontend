@@ -1,11 +1,14 @@
 import './Navigation.css';
 import { NavLink } from 'react-router-dom';
+import classnames from 'classnames';
 
-function Navigation() {
+function Navigation({ theme }) {
+    const navLink = classnames(`navigation__link navigation__link_theme_${theme}`);
+    const activeNavLink = classnames(`navigation__active-link navigation__active-link_theme_${theme}`);
     return (
         <nav className="navigation">
-            <NavLink exact to="/#" activeClassName="navigation__link_active" className="navigation__link navigation__link_theme_main">Главная</NavLink>
-            <NavLink to="/sads" activeClassName="navigation__link_active" className="navigation__link navigation__link_theme_main">Сохранённые статьи</NavLink>
+            <NavLink exact to="/" activeClassName={activeNavLink} className={navLink}>Главная</NavLink>
+            <NavLink to="/saved-news" activeClassName={activeNavLink} className={navLink}>Сохранённые статьи</NavLink>
         </nav>
     )
 }
