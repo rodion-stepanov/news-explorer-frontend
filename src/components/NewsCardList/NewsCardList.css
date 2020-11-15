@@ -72,3 +72,21 @@
         padding: 16px 0;
     }
 }
+
+@media screen and (max-width: 767px) {
+    .news-card-list__title {
+        margin-top: 32px;
+        min-width: 288px;
+    }
+    .news-card-list__container {
+        gap: 10px;
+        margin: 24px auto 16px;
+        grid-template-columns: repeat(auto-fill, 288px);
+        grid-template-rows: repeat(auto-fill, 440px);
+    }
+    .news-card-list__more-button {
+        margin-bottom: 32px;
+        padding: 16px 0;
+        width: 90%;
+    }
+}

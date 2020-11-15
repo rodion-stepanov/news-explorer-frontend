@@ -5,6 +5,7 @@ import NewsCardList from '../NewsCardList/NewsCardList';
 import Preloader from '../Preloader/Preloader';
 import About from '../About/About';
 import Footer from '../Footer/Footer';
+import LoginPopup from '../LoginPopup/LoginPopup'
 
 
 function Main() {
@@ -12,10 +13,11 @@ function Main() {
         <div className="page">
             <Header theme={'main'} />
             <SearchForm />
-            <NewsCardList theme={'main'}/>
+            <NewsCardList theme={'main'} />
             <Preloader />
             <About />
             <Footer />
+            <LoginPopup />
         </div>
     )
 }
