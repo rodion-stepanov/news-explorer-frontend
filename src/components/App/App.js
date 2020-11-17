@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch, useHistory } from 'react-router-dom';
+import { Route, Switch, BrowserRouter, useHistory } from 'react-router-dom';
 import './App.css';
 import '../Main/Main';
 import Main from '../Main/Main';
@@ -9,7 +9,7 @@ function App() {
   const [isRegisterPopupOpen, setIsRegisterPopupOpen] = React.useState(false);
   const [isLoginPopupOpen, setIsLoginPopupOpen] = React.useState(false);
   const [isTipPopupOpen, setIsTipPopupOpen] = React.useState(false);
-  const [loggedIn, setLoggedIn] = React.useState(true);
+  const [loggedIn, setLoggedIn] = React.useState(false);
   const [isBurgerOpen, setIsBurgerOpen] = React.useState(false);
   const [isPopupOpen, setIsPopupOpen] = React.useState(false);
   const history = useHistory();
@@ -105,36 +105,38 @@ function App() {
   }, []);
 
   return (
-    <Switch>
-      <Route exact path="/">
-        <Main
-          handleRegisterPopup={handleRegisterPopup}
-          handleLoginPopup={handleLoginPopup}
-          handleTipPopup={handleTipPopup}
-          isOpenRegisterPopup={isRegisterPopupOpen}
-          isOpenLoginPopup={isLoginPopupOpen}
-          isOpenTipPopup={isTipPopupOpen}
-          moveToRegisterPopup={moveToRegisterPopup}
-          moveToLoginPopup={moveToLoginPopup}
-          moveToTipPopup={moveToTipPopup}
-          onClose={closeAllPopups}
-          isLoggedIn={loggedIn}
-          onLogin={onLogin}
-          onLoginButton={handleLoginButtonClick}
-          isPopupOpen={isPopupOpen}
-          handleBurgerClick={handleBurgerClick}
-          isBurgerOpen={isBurgerOpen}
-        />
-      </Route>
-      <Route>
-        <SavedNews path="/saved-news"
-          handleBurgerClick={handleBurgerClick}
-          isBurgerOpen={isBurgerOpen}
-          isLoggedIn={loggedIn}
-          onLoginButton={handleLoginButtonClick}
-          onClose={closeAllPopups} />
-      </Route>
-    </Switch>
+    <BrowserRouter >
+      <Switch>
+        <Route exact path="/">
+          <Main
+            handleRegisterPopup={handleRegisterPopup}
+            handleLoginPopup={handleLoginPopup}
+            handleTipPopup={handleTipPopup}
+            isOpenRegisterPopup={isRegisterPopupOpen}
+            isOpenLoginPopup={isLoginPopupOpen}
+            isOpenTipPopup={isTipPopupOpen}
+            moveToRegisterPopup={moveToRegisterPopup}
+            moveToLoginPopup={moveToLoginPopup}
+            moveToTipPopup={moveToTipPopup}
+            onClose={closeAllPopups}
+            isLoggedIn={loggedIn}
+            onLogin={onLogin}
+            onLoginButton={handleLoginButtonClick}
+            isPopupOpen={isPopupOpen}
+            handleBurgerClick={handleBurgerClick}
+            isBurgerOpen={isBurgerOpen}
+          />
+        </Route>
+        <Route>
+          <SavedNews path="/saved-news"
+            handleBurgerClick={handleBurgerClick}
+            isBurgerOpen={isBurgerOpen}
+            isLoggedIn={loggedIn}
+            onLoginButton={handleLoginButtonClick}
+            onClose={closeAllPopups} />
+        </Route>
+      </Switch>
+    </BrowserRouter>
   );
 }
 

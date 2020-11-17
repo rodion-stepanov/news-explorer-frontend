@@ -4,8 +4,6 @@ import PopupWithForm from '../PopupWithForm/PopupWithForm';
 
 export default function LoginPopup({ isOpen, onClose, moveToRegisterPopup, onLogin }) {
 
-  // const avatarRef = React.useRef();
-
   function handleSubmit(e) {
     e.preventDefault();
     onLogin();
