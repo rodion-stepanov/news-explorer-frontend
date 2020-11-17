@@ -1,6 +1,5 @@
 .about {
     display: flex;
-    /* justify-content: space-between; */
     background-color: #FFFFFF;
 }
 
@@ -12,7 +11,7 @@
     overflow: hidden;
     object-fit: cover;
     object-position: top;
-    margin: 80px 56px 104px;
+    margin: 80px 56px 80px 104px;
 }
 
 .about__text-wrapper {
@@ -24,7 +23,7 @@
 }
 
 .about__title {
-    font-family: Roboto Slab;
+    font-family: Roboto Slab, Georgia, serif;
     font-style: normal;
     font-weight: normal;
     font-size: 40px;
@@ -34,7 +33,7 @@
 }
 
 .about__text {
-    font-family: Roboto;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
@@ -91,7 +90,7 @@
     .about__image {
         max-width: 272px;
         max-height: 272px;
-        margin: 32px 24px 24px;
+        margin: 32px auto 24px;
     }
     .about__text-wrapper {
         max-width: 600px;

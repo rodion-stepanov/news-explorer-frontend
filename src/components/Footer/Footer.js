@@ -1,3 +1,4 @@
+import React from 'react';
 import './Footer.css'
 import githubIcon from '../../images/github.svg'
 import telegramIcon from '../../images/telegram.svg'
@@ -17,10 +18,10 @@ function Footer() {
             </ul>
             <ul className="footer__icons">
                 <li className="footer__icon">
-                    <a href="https://github.com/Rodion257" target="_blank" rel="noopener noreferrer"><img className="footer__icon" src={githubIcon} alt="" /></a>
+                    <a href="https://github.com/Rodion257" target="_blank" rel="noopener noreferrer"><img className="footer__icon" src={githubIcon} alt="github icon" /></a>
                 </li>
                 <li className="footer__icon">
-                    <a href="http://t.me/stepanov_rodion" target="_blank" rel="noopener noreferrer"><img className="footer__icon" src={telegramIcon} alt="" /></a>
+                    <a href="http://t.me/stepanov_rodion" target="_blank" rel="noopener noreferrer"><img className="footer__icon" src={telegramIcon} alt="telegram icon" /></a>
                 </li>
             </ul>
         </footer>

@@ -1,113 +1,128 @@
 .header {
-    position: absolute;
-    box-sizing: border-box;
-    width: 100%;
-    display: flex;
-    flex: 0 0 auto;
-    justify-content: space-between;
-    background: rgba(196, 196, 196, 0.01);
-    padding: 0 calc(14.5%/2) 0;
+  position: absolute;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: space-between;
+  background: rgba(196, 196, 196, 0.01);
+  padding: 0 calc(14.5%/2) 0;
 }
 
 .header_theme_main {
-    box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
 }
 
 .header_theme_saved-news {
-    box-shadow: inset 0px -1px 0px #D1D2D6;
+  box-shadow: inset 0px -1px 0px #D1D2D6;
 }
 
 .header__menu-button {
-    display: none;
-    background: transparent no-repeat center;
-    width: 24px;
-    height: 24px;
-    outline: none;
-    border: none;
-    align-self: center;
+  display: none;
+  background: transparent no-repeat center;
+  width: 24px;
+  height: 24px;
+  outline: none;
+  border: none;
+  align-self: center;
 }
 
 .header__menu-button_theme_main {
-    background-image: url('../../images/burger-button-white.svg');
+  background-image: url('../../images/burger-button-white.svg');
 }
 
 .header__menu-button_theme_saved-news {
-    background-image: url('../../images/burger-button-black.svg');
+  background-image: url('../../images/burger-button-black.svg');
 }
 
 .header__logo {
-    font-family: Roboto Slab;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    margin: 30px 0 26px;
+  font-family: Roboto Slab, Georgia, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+  margin: 30px 0 26px;
 }
 
 .header__logo-link {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .header__logo_theme_main {
-    color: #FFFFFF;
+  color: #FFFFFF;
 }
 
 .header__logo_theme_saved-news {
-    color: #1A1B22;
+  color: #1A1B22;
 }
 
 @media screen and (max-width: 1023px) {
-    .header {
-        padding: 0 calc(10.42%/2) 0;
-    }
-    .header__logo {
-        margin: 23px 0 19px;
-    }
+  .header {
+    padding: 0 calc(10.42%/2) 0;
+  }
+  .header__logo {
+    margin: 23px 0 19px;
+  }
 }
 
 @media screen and (max-width: 767px) {
-    .header {
-        padding: 0;
-        box-shadow: none;
-        flex-direction: column;
-        transition: all 0.3s ease-out;
-    }
-    .header_menu_opened {
-        position: fixed;
-        /* background-color: #1A1B22; */
-        border-radius: 0 0 16px 16px;
-        flex-direction: column;
-        z-index: 1;
-    }
-    .header_menu_opened::before {
-        content: '';
-        position: fixed;
-        left: 0;
-        top: 0;
-        width: 100vw;
-        height: 100vh;
-        z-index: -1;
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-    .header__menu-button {
-        display: block;
-        position: fixed;
-        top: 16px;
-        right: 16px;
-        transition: all 0.4s ease-out;
-    }
-    .header__menu-button_opened {
-        background-image: url('../../images/cross.svg');
-    }
-    .header__logo {
-        font-size: 16px;
-        padding: 16px 0 16px 16px;
-        margin: 0;
-        box-shadow: inset 0px -1px 0px rgba(255, 255, 255, 0.2);
-    }
-    .header__logo_opened {
-        color: #FFFFFF;
-    }
+  .header {
+    padding: 0;
+    flex-direction: space-between;
+    width: 100%;
+    padding: 16px 5%;
+    transition: all 0.3s linear;
+  }
+  .header_fixed {
+    position: fixed;
+    background-color: #FFFFFF;
+    z-index: 1;
+  }
+  .header_menu_opened {
+    position: fixed;
+    background-color: #1A1B22;
+    z-index: 1;
+    animation: overflow 0.2s ease-out;
+  }
+  .header_menu_opened::after {
+    content: '';
+    position: absolute;
+    margin-top: 56px;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .5);
+  }
+  .header__menu-button {
+    display: flex;
+    align-self: center;
+    top: 16px;
+    right: 16px;
+    z-index: 1;
+  }
+  .header__menu-button_opened {
+    background-image: url('../../images/cross.svg');
+  }
+  .header__logo {
+    font-size: 16px;
+    margin: 0;
+    transition: all 0.3s linear;
+  }
+  .header__logo_opened {
+    color: #FFFFFF;
+  }
+}
+
+@keyframes overflow {
+  from {
+    width: 0;
+    background-color: #1A1B22;
+  }
+  to {
+    width: 100%;
+    background-color: #1A1B22;
+  }
 }

@@ -1,83 +1,143 @@
 .search-form {
-    background-image: url('../../images/georgia-de-lotz--UsJoNxLaNo-unsplash.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
+  background-image: url('../../images/georgia-de-lotz--UsJoNxLaNo-unsplash.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
 }
 
 .search-form__wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-self: center;
-    align-self: center;
-    max-width: 608px;
-    width: 42.22%;
-    margin: 0 auto 0;
-    padding-top: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-self: center;
+  max-width: 608px;
+  width: 42.22%;
+  margin: 0 auto 0;
+  padding-top: 160px;
 }
 
 .search-form__title {
-    font-family: Roboto Slab;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 60px;
-    line-height: 64px;
-    color: #FFFFFF;
-    margin: 0 0 32px;
+  font-family: Roboto Slab, Georgia, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 60px;
+  line-height: 64px;
+  color: #FFFFFF;
+  margin: 0 0 32px;
 }
 
 .search-form__desription {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 24px;
-    color: #FFFFFF;
-    max-width: 545px;
-    margin: 0 0 64px 0;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+  color: #FFFFFF;
+  max-width: 545px;
+  margin: 0 0 64px 0;
 }
 
 .search-form__search-container {
-    display: flex;
-    max-width: 608px;
-    background: #FFFFFF;
-    box-sizing: border-box;
-    border-radius: 100px;
-    margin-bottom: 80px;
+  display: flex;
+  max-width: 608px;
+  background: #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 100px;
+  margin-bottom: 80px;
 }
 
 .search-form__input {
-    width: 72.37%;
-    background: #FFFFFF;
-    padding: 21px 40px 21px 24px;
-    border-radius: 100px;
-    border: none;
-    color: #1A1B22;
-    box-sizing: border-box;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 22px;
-    outline: none;
-    caret-color: #2F71E5;
+  width: 72.37%;
+  background: #FFFFFF;
+  padding: 21px 40px 21px 24px;
+  border-radius: 100px 0 0 100px;
+  border: none;
+  color: #1A1B22;
+  box-sizing: border-box;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  outline: none;
+  caret-color: #2F71E5;
+}
+
+.search-form__input:focus {
+  border: none;
 }
 
 .search-form__input::-webkit-input-placeholder {
-    color: #B6BCBF;
+  color: #B6BCBF;
 }
 
 .search-form__input::-moz-placeholder {
-    color: #B6BCBF;
+  color: #B6BCBF;
 }
 
 .search-form__button {
+  background-color: #2F71E5;
+  box-shadow: 0px 5px 15px rgba(14, 26, 57, 0.2);
+  border-radius: 100px;
+  width: 168px;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  margin-right: -1px;
+  color: #FFFFFF;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background-color ease-out 0.5s;
+}
+
+.search-form__button:hover {
+  background-color: #347EFF;
+}
+
+.search-form__button:active {
+  background-color: #2A65CC;
+  transition: background-color ease-out 0.2s;
+}
+
+.search-form__button_locked {
+  background: #E6E8EB;
+  color: #B6BCBF;
+}
+
+@media screen and (max-width: 1023px) {
+  .search-form__title {
+    font-size: 36px;
+    line-height: 40px;
+    max-width: 385px;
+    margin-bottom: 16px;
+  }
+  .search-form__wrapper {
+    width: 58.9%;
+    padding-top: 104px;
+    max-width: 452px;
+  }
+  .search-form__desription {
+    margin-bottom: 48px;
+  }
+  .search-form__search-container {
+    margin-bottom: 48px;
+  }
+  .search-form__input {
+    width: 68.07%;
+    padding: 17px 40px 17px 24px;
+  }
+  .search-form__button {
     background-color: #2F71E5;
     box-shadow: 0px 5px 15px rgba(14, 26, 57, 0.2);
     border-radius: 100px;
     width: 168px;
-    font-family: Roboto;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
@@ -90,100 +150,39 @@
     outline: none;
     cursor: pointer;
     transition: background-color ease-out 0.5s;
-}
-
-.search-form__button:hover {
-    background-color: #347EFF;
-}
-
-.search-form__button:active {
-    background-color: #2A65CC;
-    transition: background-color ease-out 0.2s;
-}
-
-.search-form__button_locked {
-    background: #E6E8EB;
-    color: #B6BCBF;
-}
-
-@media screen and (max-width: 1023px) {
-    .search-form__title {
-        font-size: 36px;
-        line-height: 40px;
-        max-width: 385px;
-        margin-bottom: 16px;
-    }
-    .search-form__wrapper {
-        width: 58.9%;
-        padding-top: 104px;
-        max-width: 452px;
-    }
-    .search-form__desription {
-        margin-bottom: 48px;
-    }
-    .search-form__search-container {
-        margin-bottom: 48px;
-    }
-    .search-form__input {
-        width: 68.07%;
-        padding: 17px 40px 17px 24px;
-    }
-    .search-form__button {
-        background-color: #2F71E5;
-        box-shadow: 0px 5px 15px rgba(14, 26, 57, 0.2);
-        border-radius: 100px;
-        width: 168px;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 24px;
-        text-align: center;
-        margin-right: -1px;
-        color: #FFFFFF;
-        box-sizing: border-box;
-        border: none;
-        outline: none;
-        cursor: pointer;
-        transition: background-color ease-out 0.5s;
-    }
+  }
 }
 
 @media screen and (max-width: 767px) {
-    
-    .search-form__wrapper {
-        width: 90%;
-        padding-top: 86px;
-        max-width: 400px;
-    }
-    
-    .search-form__title {
-        font-size: 36px;
-        line-height: 40px;
-        margin-bottom: 16px;
-    }
-    
-    .search-form__desription {
-        max-width: 545px;
-        margin-bottom: 122px;
-    }
-    
-    .search-form__search-container {
-        flex-direction: column;
-        background-color: rgba(255, 255, 255, 0);
-        margin-bottom: 32px;
-    }
-    
-    .search-form__input {
-        width: 100%;
-        padding: 17px 16px;
-        caret-color: #2F71E5;
-        margin-bottom: 16px;
-    }
-    
-    .search-form__button {
-        width: 100%;
-        margin-right: 0;
-        padding: 15px 113px 17px 114px;
-    }
+  .search-form__wrapper {
+    width: 90%;
+    padding-top: 86px;
+    max-width: 400px;
+  }
+  .search-form__title {
+    font-size: 36px;
+    line-height: 40px;
+    margin-bottom: 16px;
+  }
+  .search-form__desription {
+    max-width: 545px;
+    margin-bottom: 122px;
+  }
+  .search-form__search-container {
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0);
+    margin-bottom: 32px;
+  }
+  .search-form__input {
+    width: 100%;
+    padding: 17px 16px;
+    caret-color: #2F71E5;
+    margin-bottom: 16px;
+    border-radius: 100px;
+  }
+  .search-form__button {
+    width: 100%;
+    margin-right: 0;
+    padding: 15px 113px 17px 114px;
+  }
 }
