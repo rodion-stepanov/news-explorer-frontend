@@ -14,7 +14,6 @@ function App() {
   const [isPopupOpen, setIsPopupOpen] = React.useState(false);
   const history = useHistory();
 
-
   function handleRegisterPopup() {
     setIsRegisterPopupOpen(!isRegisterPopupOpen);
     setIsPopupOpen(!isPopupOpen);
