@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch, BrowserRouter, useHistory } from 'react-router-dom';
+import { Route, Switch, useHistory } from 'react-router-dom';
 import './App.css';
 import '../Main/Main';
 import Main from '../Main/Main';
@@ -105,7 +105,7 @@ function App() {
   }, []);
 
   return (
-    <BrowserRouter >
+
       <Switch>
         <Route exact path="/">
           <Main
@@ -136,7 +136,6 @@ function App() {
             onClose={closeAllPopups} />
         </Route>
       </Switch>
-    </BrowserRouter>
   );
 }
 

@@ -17,6 +17,7 @@ function NewsCard({ theme, isLoggedIn }) {
         {/* TODO дописать логику текста подсказки для карточек */}
         {(isLoggedIn && theme == 'saved-news') && <p className="news-card__keyword">Фотография</p>}
         <p className={tipClassName}>{isLoggedIn ? 'Убрать из сохраненных' : 'Войдите, чтобы сохранять статьи'}</p>
+        {/* класс для сохраненной карточки news-card__button_marked */}
         <button className={buttonClassName} type="button" onMouseEnter={tipHandler} onMouseLeave={tipHandler} />
       </div>
       <img className="news-card__image" alt="Картинка новости" src="https://images.unsplash.com/photo-1580817270982-75c71a0d53e6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" />
