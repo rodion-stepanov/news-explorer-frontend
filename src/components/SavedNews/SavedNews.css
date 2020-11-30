@@ -16,4 +16,5 @@
     flex-direction: column;
     justify-content: center;
     flex: 1 0 auto;
+    margin-bottom: auto;
 }

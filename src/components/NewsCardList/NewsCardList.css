@@ -4,6 +4,10 @@
   background: #F5F6F7;
 }
 
+.news-card-list_hidden {
+  display: none;
+}
+
 .news-card-list__title {
   font-family: Roboto Slab, Georgia, serif;
   font-style: normal;
@@ -19,7 +23,7 @@
 
 .news-card-list__container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 400px);
+  grid-template-columns: repeat(3, minmax(224px, 400px));
   grid-gap: 16px;
   justify-content: center;
   max-width: 1440px;

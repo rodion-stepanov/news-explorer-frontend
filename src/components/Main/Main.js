@@ -12,28 +12,38 @@ import PopupWithTip from '../PopupWithTip/PopupWithTip';
 import classnames from 'classnames';
 
 function Main({
+  handleLoginPopup,
   isOpenRegisterPopup,
   isOpenLoginPopup,
   isOpenTipPopup,
-  // handleRegisterPopup,
-  handleLoginPopup,
-  // handleTipPopup,
-  onClose,
   moveToRegisterPopup,
   moveToLoginPopup,
   moveToTipPopup,
+  onClose,
   isLoggedIn,
   onLogin,
   onLoginButton,
   isPopupOpen,
   handleBurgerClick,
-  isBurgerOpen }) {
+  isBurgerOpen,
+  onFindArticles,
+  articles,
+  savedArticles,
+  isLoading,
+  isNewsNotFound,
+  onSaveButton,
+  onRemoveButton,
+  isSearching,
+  isError,
+  reserveImage
+}) {
 
   const pageClass = classnames('page', { 'page_fixed': isPopupOpen })
 
   return (
     <div className={pageClass}>
-      <Header theme='main'
+      <Header
+        theme='main'
         handleLoginPopup={handleLoginPopup}
         isLoggedIn={isLoggedIn}
         onLoginButton={onLoginButton}
@@ -41,9 +51,17 @@ function Main({
         handleBurgerClick={handleBurgerClick}
         isBurgerOpen={isBurgerOpen}
         onClose={onClose} />
-      <SearchForm />
-      <NewsCardList theme='main' isLoggedIn={isLoggedIn} />
-      <Preloader />
+      <SearchForm
+        onFindArticles={onFindArticles} isSearching={isSearching} />
+      <NewsCardList
+        theme='main' isLoggedIn={isLoggedIn}
+        articles={articles} savedArticles={savedArticles}
+        onSaveButton={onSaveButton} onRemoveButton={onRemoveButton}
+        handleLoginPopup={handleLoginPopup}
+        isLoading={isLoading} reserveImage={reserveImage} />
+      <Preloader
+        isNewsNotFound={isNewsNotFound}
+        isError={isError} isSearching={isSearching} />
       <About />
       <Footer />
       <RegisterPopup

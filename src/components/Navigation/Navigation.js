@@ -2,13 +2,17 @@ import React from 'react';
 import './Navigation.css';
 import { NavLink } from 'react-router-dom';
 import classnames from 'classnames';
+import { CurrentUserContext } from '../../contexts/CurrentUserContext';
 
-function Navigation({ theme, isBurgerOpen, onClose,
+function Navigation({
+  theme, isBurgerOpen, onClose,
   isLoggedIn, onLoginButton }) {
+
+  const currentUser = React.useContext(CurrentUserContext);
   const navLink = classnames(`navigation__link navigation__link_theme_${theme}`);
   const activeNavLink = classnames(`navigation__active-link navigation__active-link_theme_${theme}`);
   const navigation = classnames('navigation', { 'navigation_opened': isBurgerOpen })
-  const logoutText = isLoggedIn ? 'Грета' : 'Авторизоваться';
+  const logoutText = isLoggedIn ? currentUser.name : 'Авторизоваться';
 
 
   const navigationLogout = classnames(`navigation__logout navigation__logout_theme_${theme}`);
@@ -20,7 +24,7 @@ function Navigation({ theme, isBurgerOpen, onClose,
       {isLoggedIn && <NavLink to="/saved-news" onClick={onClose} activeClassName={activeNavLink} className={navLink}>Сохранённые статьи</NavLink>}
       <button className={navigationLogout} type="button" onClick={onLoginButton}>
         <h2 className={navigationLogoutText}>{logoutText}</h2>
-      {isLoggedIn &&  <div className={navigationLogoutImage} />}
+        {isLoggedIn && <div className={navigationLogoutImage} />}
       </button>
     </nav>
   )
