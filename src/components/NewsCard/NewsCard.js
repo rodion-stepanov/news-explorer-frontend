@@ -72,6 +72,7 @@ function NewsCard({
       <article className="news-card__article">{article.text}</article>
       <p className="news-card__source">{article.source}</p>
     </a >
+
   )
 }
 
