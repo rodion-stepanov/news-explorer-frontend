@@ -10,7 +10,11 @@ function SavedNews({
   isBurgerOpen,
   isLoggedIn,
   onLoginButton,
-  onClose
+  onClose,
+  articles,
+  keywords,
+  onRemoveButton,
+  reserveImage
 }) {
 
   return (
@@ -20,10 +24,11 @@ function SavedNews({
         isBurgerOpen={isBurgerOpen}
         isLoggedIn={isLoggedIn}
         onLoginButton={onLoginButton}
-        onClose={onClose}/>
+        onClose={onClose} />
       <main className="saved-news">
-        <SavedNewsHeader />
-        <NewsCardList theme='saved-news' isLoggedIn={isLoggedIn}/>
+        <SavedNewsHeader keywords={keywords} />
+        <NewsCardList theme='saved-news' isLoggedIn={isLoggedIn}
+          articles={articles} onRemoveButton={onRemoveButton} reserveImage={reserveImage}/>
       </main >
       <Footer />
     </div>

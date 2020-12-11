@@ -3,6 +3,7 @@
   flex-direction: column;
   width: 100%;
   background: #ffffff;
+  margin-bottom: auto;
 }
 
 .saved-news-header__title {
