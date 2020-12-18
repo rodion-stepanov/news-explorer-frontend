@@ -133,8 +133,10 @@ function App() {
 
   //Обновление сохраненных ключевых слов
   React.useEffect(() => {
-    const arrKeyword = savedArticles.map(article => article.keyword)
-    setSavedKeywords(arrKeyword)
+    if (savedArticles) {
+      const arrKeyword = savedArticles.map(article => article.keyword)
+      setSavedKeywords(arrKeyword)
+    }
   }, [savedArticles]);
 
   function handleRegisterPopup() {
