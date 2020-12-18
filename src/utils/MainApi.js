@@ -1,4 +1,4 @@
-export const BASE_URL = 'https://www.api.news.stepanov.students.nomoreparties.co';
+export const BASE_URL = 'https://www.api.news.rodion.students.nomoreparties.xyz';
 
 export const register = ({ email, password, name }) => {
   return fetch(`${BASE_URL}/signup`, {
@@ -43,7 +43,9 @@ export const getUser = (jwt) => {
     },
   })
     .then((res) => {
-      return res.json()
+      if (res) {
+        return res.json()
+      }
     })
     .catch(err => console.log(err))
 }
