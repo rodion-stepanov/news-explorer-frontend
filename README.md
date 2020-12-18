@@ -4,9 +4,9 @@
 ## Описание
 Фронтенд дипломного проекта NewsExplorer.
 Сайт для поиска новостей и сохранения их в личном кабинете.
-Доступен по ссылке: [http://news.rodion.students.nomoreparties.xyz/]
+Доступен по ссылке: http://news.rodion.students.nomoreparties.xyz/
 
-Работает в связке с собственным бэкэндом: [https://github.com/Rodion257/news-explorer-api] 
+Работает в связке с собственным бэкэндом: https://github.com/Rodion257/news-explorer-api 
 
 ## Технологии
 Проект сделан на React. 
